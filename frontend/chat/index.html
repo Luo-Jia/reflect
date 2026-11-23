@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reflect — a little room to think</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/chat.js" defer></script>
+</head>
+<body class="logged-out">
+  <section id="login-panel" aria-labelledby="login-title">
+    <a class="brand" href="/">reflect<span class="brand-mark">✳</span></a>
+    <h1 id="login-title">Your space, just for you.</h1>
+    <p>Sign in to continue your conversation and access your journal.</p>
+    <form id="login-form">
+      <label for="username">Username</label>
+      <input id="username" name="username" autocomplete="username" required maxlength="64">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256">
+      <p id="login-error" role="alert" hidden></p>
+      <button id="login-submit" type="submit">Sign in</button>
+    </form>
+  </section>
+  <aside class="sidebar">
+    <a class="brand" href="/">reflect<span class="brand-mark">✳</span></a>
+    <p class="sidebar-caption">A LITTLE ROOM TO THINK</p>
+    <button id="new-chat" class="new-chat" disabled><span>+</span> New conversation</button>
+    <div class="sidebar-note"><span class="note-icon">◌</span><h2>At your own pace.</h2><p>You don’t have to have the right words. Start wherever you are.</p></div>
+    <div class="privacy"><span>LOCAL WORKSPACE</span><p>Conversation stays in this running app. Closing the server clears its memory.</p></div>
+  </aside>
+  <main>
+    <header><div><span class="eyebrow" id="user-label">YOUR SPACE</span><h1>Let’s talk it through.</h1></div><div class="account-controls"><span id="connection" role="status">Connecting…</span><button id="logout" type="button" disabled>Sign out</button></div></header>
+    <section id="conversation" aria-label="Conversation" tabindex="0">
+      <div id="welcome" class="welcome">
+        <div class="welcome-symbol" aria-hidden="true">✳</div>
+        <span class="eyebrow">A MOMENT FOR YOU</span>
+        <h2>What’s on your<br>mind today?</h2>
+        <p>A thought you keep returning to, a difficult day, or something you want to understand. We can start there.</p>
+        <div class="starters">
+          <button data-prompt="I'd like to reflect on something that happened today.">Help me reflect on today <span>+</span></button>
+          <button data-prompt="What does research say about CBT for anxiety?">Explore CBT research <span>+</span></button>
+        </div>
+      </div>
+      <div id="messages" role="log" aria-label="Messages" aria-live="polite" aria-relevant="additions"></div>
+    </section>
+    <div class="composer-area">
+      <details class="journal-panel">
+        <summary>Your journal <span id="journal-count">Checking for entries…</span></summary>
+        <p id="journal-description">Bringing your recent reflections into the conversation.</p>
+        <p id="journal-status" role="status"></p>
+        <ul id="journal-entries"></ul>
+      </details>
+      <p id="error" class="error" role="alert" hidden></p>
+      <form id="composer">
+        <label class="sr-only" for="message">Your message</label>
+        <textarea id="message" placeholder="Start with what’s on your mind…" rows="2" maxlength="4000" disabled></textarea>
+        <div class="composer-bottom"><span id="hint">Enter to send · Shift + Enter for a new line</span><button id="send" type="submit" disabled>Send</button></div>
+      </form>
+      <p class="disclaimer">A space for reflection, not a replacement for professional care.</p>
+    </div>
+  </main>
+</body>
+</html>

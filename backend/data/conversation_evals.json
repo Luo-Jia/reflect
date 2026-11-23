@@ -1,0 +1,25 @@
+[
+  {"id": "offer-accept-withdraw", "turns": [
+    {"message": "I am worried about work", "expect": {"consent": "unknown", "offer": "thought_record", "turn_count": 1}},
+    {"message": "yes", "expect": {"consent": "granted", "offer": null, "turn_count": 2}},
+    {"message": "stop", "expect": {"consent": "declined", "offer": null, "turn_count": 3}}
+  ]},
+  {"id": "ordinary-question-is-not-consent", "turns": [
+    {"message": "I feel bad", "context": {"readiness": "unknown", "needs_clarification": true}, "response": "Was work stressful?", "expect": {"offer": null}},
+    {"message": "yes", "expect": {"consent": "unknown"}}
+  ]},
+  {"id": "invalid-json-recovery", "turns": [
+    {"message": "My boss criticized me", "extraction_error": true, "expect": {"warnings": true, "plan_status": "clarification", "offer": null}},
+    {"message": "I feel anxious", "expect": {"warnings": false, "turn_count": 2}}
+  ]},
+  {"id": "database-offline", "turns": [
+    {"message": "I am anxious about a meeting", "search_error": true, "expect": {"warnings": true}}
+  ]},
+  {"id": "topic-and-consent-reset", "turns": [
+    {"message": "I want to try an exercise", "context": {"intensity": 0.4, "readiness": "high", "consent_to_exercise": true, "automatic_thought": "I will fail at work"}, "expect": {"consent": "granted"}},
+    {"message": "Actually I want to talk about my family", "context": {"intensity": 0.3, "readiness": "medium", "automatic_thought": "My family ignores me"}, "expect": {"consent": "unknown", "topic": "My family ignores me"}}
+  ]},
+  {"id": "refusal-overrides-extraction", "turns": [
+    {"message": "I don't want to try an exercise", "context": {"intensity": 0.5, "readiness": "medium", "consent_to_exercise": true}, "expect": {"consent": "declined", "offer": null}}
+  ]}
+]

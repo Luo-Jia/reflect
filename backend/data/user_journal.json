@@ -1,0 +1,42 @@
+[
+  {
+    "entry_id": "demo-001",
+    "date": "2026-11-16",
+    "title": "A busy Monday at work",
+    "content": "Several deadlines arrived at once. I felt overwhelmed and kept switching between tasks. Writing down one small next step helped me finish the report.",
+    "synthetic": false,
+    "profile_id": "1"
+  },
+  {
+    "entry_id": "demo-002",
+    "date": "2026-11-17",
+    "title": "Replaying a meeting",
+    "content": "I stumbled over an answer in a work meeting and worried that my colleagues thought I was unprepared. Later a colleague thanked me for explaining the project clearly.",
+    "synthetic": false,
+    "profile_id": "1"
+  },
+  {
+    "entry_id": "demo-003",
+    "date": "2026-11-18",
+    "title": "A walk and a conversation",
+    "content": "I took a short walk after work and called a friend. I felt less isolated afterward. I would like to make more time for connecting with people.",
+    "synthetic": false,
+    "profile_id": "1"
+  },
+  {
+    "entry_id": "demo-004",
+    "date": "2026-11-19",
+    "title": "A restless night",
+    "content": "I stayed up scrolling on my phone and found it hard to sleep. I felt tired the next morning. Putting my phone away earlier is something I might try.",
+    "synthetic": false,
+    "profile_id": "1"
+  },
+  {
+    "entry_id": "demo-005",
+    "date": "2026-11-20",
+    "title": "Making room for a hobby",
+    "content": "I spent half an hour drawing instead of checking work messages. It was enjoyable even though the sketch was unfinished. I noticed that an activity does not need to be perfect to be worthwhile.",
+    "synthetic": false,
+    "profile_id": "1"
+  }
+]

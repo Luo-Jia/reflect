@@ -1,0 +1,36 @@
+[
+  {
+    "preferred_name": "Alice",
+    "response_preferences": {
+      "length": "short",
+      "style": "practical"
+    },
+    "goals": [
+      "manage work stress"
+    ],
+    "confirmed_facts": [
+      {
+        "fact": "Works as a software developer",
+        "source": "user_confirmed"
+      }
+    ],
+    "profile_id": "1"
+  },
+  {
+    "preferred_name": "Bob",
+    "response_preferences": {
+      "length": "verbose",
+      "style": "soft"
+    },
+    "goals": [
+      "manage life stress"
+    ],
+    "confirmed_facts": [
+      {
+        "fact": "Works as a spiritual guide",
+        "source": "user_confirmed"
+      }
+    ],
+    "profile_id": "2"
+  }
+]

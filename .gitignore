@@ -1,0 +1,6 @@
+backend/data/accounts.sqlite3*
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+backend/logs/model.log
